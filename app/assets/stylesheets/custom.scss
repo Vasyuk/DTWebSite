@@ -1,2 +1,87 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  font-size: 17px;
+}
+
+html,body{
+  font-family: 'Rajdhani', sans-serif;
+  height: 96%;
+}
+
+.wrapper{
+  display: flex;
+ flex-direction: column;
+ height: 100%;
+}
+
+.content{
+  flex: 1 0 auto;
+}
+
+.container-fluid {
+  margin-right: 4%;
+  margin-left: 4%;
+  font-size: 15px;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.contact{
+  margin-top:3%;
+}
+
+
+
+
+                                      // PAGES
+
+.titlePages{
+  text-align: center;
+}
+
+.photo{
+  width: 100%;
+  height: 230px;
+  margin-top: 5%;
+}
+
+.photoInd{
+  width: 100%;
+  height: 220px;
+}
+
+                                      // FOOTER
+.footer {
+   margin-top: 2%;
+   flex: 0 0 auto;
+   border-top: 1px groove;
+}
+.footer div {
+  margin-right: 4%;
+  text-align: right;
+  padding: 10px;
+}
+
+.imgAdmin{
+  width:50%;
+}

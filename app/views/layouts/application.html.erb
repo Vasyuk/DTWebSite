@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DTWebSite</title>
+    <title>DariyaWebSite</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+      <%= render 'layouts/header' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class = "container wrapper">
+      <div class ="row content">
+        <%= yield %>
+      </div>
+      <div class="footer">
+        <%= render 'layouts/footer' %>
+      </div>
+    </div>
   </body>
 </html>
