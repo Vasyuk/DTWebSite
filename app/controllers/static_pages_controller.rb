@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def portfolio
+    @potfolio = Portfolio.all
   end
 
   def contacts

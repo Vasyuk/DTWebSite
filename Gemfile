@@ -1,8 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', github: 'sferik/rails_admin'
+gem 'rails_admin_rollincode', '1.0.0'
+gem "devise"
 gem 'rails',        '5.1.2'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
+gem 'dragonfly',    '1.0.5'
 gem 'bootstrap-sass','3.3.7'
 gem 'uglifier',     '3.2.0'
 gem 'coffee-rails', '4.2.2'
