@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-
-gem 'remotipart', github: 'mshibuya/remotipart'
-gem 'rails_admin', github: 'sferik/rails_admin'
-gem 'rails_admin_rollincode', '1.0.0'
+gem 'activeadmin', github: 'activeadmin'
 gem "devise"
 gem 'rails',        '5.1.2'
 gem 'puma',         '3.9.1'
