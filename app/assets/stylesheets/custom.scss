@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+h1{
+  font-size: 55px;
+}
+
 p{
   font-size: 17px;
 }
@@ -58,6 +62,23 @@ html,body{
 .titlePages{
   text-align: center;
 }
+
+.cadreAccueile{
+  background-image: url('/assets/frame.png') ;
+  margin-top: -3%;
+}
+
+.textAccueile{
+  padding: 22%;
+  h1{
+    text-align: center;
+  }
+}
+
+.flImage{
+  margin-top: -300%;
+}
+
 
 .photo{
   width: 100%;
