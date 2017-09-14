@@ -1,0 +1,9 @@
+<% @potfolio.each do |portfol| %>
+  <div class = "col-md-4">
+    <% if portfol.image_uid.present? %>
+      <%= image_tag portfol.image.thumb('400x200#').url  %>
+    <% else %>
+      <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
+    <% end %>
+  </div>
+<% end %>

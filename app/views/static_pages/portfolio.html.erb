@@ -1,13 +1,26 @@
 <div class = "container">
   <div class = "row">
-    <% @potfolio.each do |portfol| %>
-      <div class = "col-md-4">
-        <% if portfol.image_uid.present? %>
-          <%= image_tag portfol.image.thumb('400x200#').url  %>
-        <% else %>
-          <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
-        <% end %>
-      </div>
-    <% end %>
+    <div class = "col-md-12">
+      <h1 class = "titlePages">Portfolio</h1>
+    </div>
+    <div class = "col-md-offset-3 col-md-6">
+      <%= link_to image_tag('Untitled-2.png')%>
+    </div>
+    <div class = "col-md-offset-3 col-md-6">
+      <h2>Illustrations</h2>
+      <%= link_to image_tag('illusbutton.png'), portfolio_illustration_path %>
+    </div>
+    <div class = "col-md-offset-3 col-md-6">
+      <h2>Backgrounds</h2>
+      <%= link_to image_tag('decorbutton.png'), portfolio_background_path %>
+    </div>
+    <div class = "col-md-offset-3 col-md-6">
+      <h2>Personnages</h2>
+      <%= link_to image_tag('charabutton.png'), portfolio_personnages_path %>
+    </div>
+    <div class = "col-md-offset-3 col-md-6">
+      <h2>Modèles 3D</h2>
+      <%= link_to image_tag('3dbutton.png'), portfolio_modeles3D_path %>
+    </div>
   </div>
 </div>

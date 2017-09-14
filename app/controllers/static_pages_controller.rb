@@ -7,5 +7,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contacts
+    @param = params
   end
+
 end
