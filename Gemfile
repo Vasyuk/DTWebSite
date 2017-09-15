@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'activeadmin', github: 'activeadmin'
+gem 'rails_admin'
 gem "devise"
 gem 'rails',        '5.1.2'
 gem 'puma',         '3.9.1'

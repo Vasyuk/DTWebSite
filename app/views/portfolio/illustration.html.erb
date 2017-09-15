@@ -12,6 +12,13 @@
   <div class = "row">
     <% @potfolio.each do |portfol| %>
       <% if portfol.typeOfImage == 'illus' %>
+        <div class = "col-md-4">
+          <% if portfol.image_uid.present? %>
+            <%= image_tag portfol.image.thumb('320x180#').url  %>
+          <% else %>
+            <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
+          <% end %>
+        </div>
       <% end %>
     <% end %>
   </div>

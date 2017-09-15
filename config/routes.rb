@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   root to: 'static_pages#pagedaccueile'
 
   get '/portfolio', to: 'static_pages#portfolio'
