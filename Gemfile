@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails_admin'
+gem 'bcrypt',         '3.1.11'
 gem "devise"
-gem 'rails',        '5.1.2'
+gem 'rails',        '5.1.4'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
 gem 'dragonfly',    '1.0.5'

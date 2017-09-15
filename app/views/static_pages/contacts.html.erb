@@ -28,15 +28,19 @@
       <p>Tel: +33689521977</p>
       <%= link_to image_tag('facebook-logo-button.png') , 'https://www.facebook.com/profile.php?id=100001326534418' %>
       <%= link_to image_tag('linkedin-logo-button.png') , 'https://www.linkedin.com/in/darya-trukhan-9741a212a?trk=nav_responsive_tab_profile' %>
-      <%= form_tag("/contacts", method: "get") do%>
-        <%= label_tag("Firstname :") %>
-        <%= search_field(:user, :firstname) %>
-        <%= label_tag( "Email :") %>
-        <%= email_field(:user, :address) %>
-        <%= label_tag( "Texte :") %>
-        <%= text_area_tag(:message, "Hi, nice site", size: "24x6") %>
-        <%= submit_tag("contacts") %>
-      <% end %>
+      <div class = "contact">
+        <%= form_tag("/contacts", method: "get") do%>
+          <%= label_tag("Prénom :") %>
+          <%= text_field(:user, :firstname,class: 'form-control') %>
+          <%= label_tag( "Email :") %>
+          <%= email_field(:user, :email, class: 'form-control') %>
+          <%= label_tag("Sujet :") %>
+          <%= text_field(:user, :sujet, class: 'form-control') %>
+          <%= label_tag( "Texte :") %>
+          <%= text_area_tag(:message,'' ,class: 'form-control textArea') %>
+          <%= submit_tag("Envoyer", class: 'btn btn-primary') %>
+        <% end %>
+      </div>
     </div>
   </div>
   <div class = "row">
