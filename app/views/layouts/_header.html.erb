@@ -19,12 +19,13 @@
           <!-- <a><%= link_to "Portfolio", root_path, {:class => 'dropdown-toggle', 'data-toggle' => 'dropdown', 'role' => 'button', 'aria-haspopup' => 'true', 'aria-expanded' => ''} %></a> -->
           <a href = "/portfolio" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Illustration", portfolio_path %></li>
+            <li><%= link_to "Tous", portfolio_path %></li>
+            <li><%= link_to "Illustration", portfolio_illustration_path %></li>
             <li><%= link_to "Background & Decor", portfolio_background_path %></li>
             <li><%= link_to "Personnages", portfolio_personnages_path %></li>
             <li><%= link_to "Modèles 3D", portfolio_modeles3D_path %></li>
             <li><%= link_to "Photographie", portfolio_photographie_path %></li>
-            <li><%= link_to "Photographie", portfolio_video_path %></li>
+            <li><%= link_to "Video", portfolio_video_path %></li>
           </ul>
         </li>
         <li><%= link_to "Contacts", contacts_path %></li>

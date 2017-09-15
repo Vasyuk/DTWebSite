@@ -97,8 +97,17 @@ html,body{
 }
 
 .portfolioPhoto{
-  width: 400px;
-  height: 200px;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .width.container {
+    width: 1000px;
+  }
+}
+
+.width{
+  margin-top:2%; 
 }
                                       // FOOTER
 .footer {

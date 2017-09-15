@@ -1,4 +1,4 @@
-<div class = "container">
+<div class = "container ">
   <div class = "row">
     <div class = "col-md-12">
       <h1 class = "titlePages">Modèles 3D</h1>
@@ -6,5 +6,14 @@
     <div class = "col-md-offset-3 col-md-6">
       <%= link_to image_tag('Untitled-2.png')%>
     </div>
+  </div>
+</div>
+<div class = "container width">
+  <div class = "row">
+    <% @potfolio.each do |portfol| %>
+      <% if portfol.typeOfImage == '3d' %>
+
+      <% end %>
+    <% end %>
   </div>
 </div>

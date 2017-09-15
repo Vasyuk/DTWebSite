@@ -1,10 +1,23 @@
 <div class = "container">
   <div class = "row">
     <div class = "col-md-12">
-      <h1 class = "titlePages">Video</h1>
+      <h1 class = "titlePages">video</h1>
     </div>
     <div class = "col-md-offset-3 col-md-6">
       <%= link_to image_tag('Untitled-2.png')%>
     </div>
+  </div>
+</div>
+<div class = "container width">
+  <div class = "row">
+    <% @potfolio.each do |portfol| %>
+    <div class = "col-md-4">
+      <% if portfol.image_uid.present? %>
+        <%= image_tag portfol.image.thumb('320x180#').url  %>
+      <% else %>
+        <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
+      <% end %>
+    </div>
+    <% end %>
   </div>
 </div>
