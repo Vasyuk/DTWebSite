@@ -7,7 +7,9 @@ class StaticPagesController < ApplicationController
   end
 
   def contacts
-    @param = params
+    UserMailer.email_from_portfolio(params).deliver_now
+    flash.now[:notice] = 'Invalid email/password combination'
   end
+
 
 end

@@ -18,4 +18,5 @@ Rails.application.routes.draw do
 
   get '/portfolio/video',  to: 'portfolio#video'
 
+  resources :emails
 end

@@ -14,7 +14,10 @@
       <% if portfol.typeOfImage == '3D' %>
         <div class = "col-md-4">
           <% if portfol.image_uid.present? %>
-            <%= image_tag portfol.image.thumb('320x180#').url  %>
+            <%= link_to image_path(portfol.image.url ,class: 'fancybox', :rel=>"gallery1", :title=>"Electrical Power Lines and Pylons disappear over t.. (pautliubomir)") do %>
+              <%= image_tag(portfol.image.thumb('320x180#').url) %>
+            <% end %>
+
           <% else %>
             <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
           <% end %>
@@ -22,4 +25,12 @@
       <% end %>
     <% end %>
   </div>
+  <script>
+    $(document).ready(function() {
+      $(".fancybox").fancybox({
+      		openEffect	: 'none',
+      		closeEffect	: 'none'
+      	});
+    });
+  </script>
 </div>

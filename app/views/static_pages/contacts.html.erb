@@ -29,17 +29,29 @@
       <%= link_to image_tag('facebook-logo-button.png') , 'https://www.facebook.com/profile.php?id=100001326534418' %>
       <%= link_to image_tag('linkedin-logo-button.png') , 'https://www.linkedin.com/in/darya-trukhan-9741a212a?trk=nav_responsive_tab_profile' %>
       <div class = "contact">
-        <%= form_tag("/contacts", method: "get") do%>
-          <%= label_tag("Prénom :") %>
-          <%= text_field(:user, :firstname,class: 'form-control') %>
-          <%= label_tag( "Email :") %>
-          <%= email_field(:user, :email, class: 'form-control') %>
-          <%= label_tag("Sujet :") %>
-          <%= text_field(:user, :sujet, class: 'form-control') %>
-          <%= label_tag( "Texte :") %>
-          <%= text_area_tag(:message,'' ,class: 'form-control textArea') %>
-          <%= submit_tag("Envoyer", class: 'btn btn-primary') %>
+        <%= form_tag("/contacts", method: "get") do %>
+          <%= label_tag(:name, "Prènom") %>
+          <%= text_field_tag :name, params[:name], class: "form-control" %>
+          <%= label_tag(:email, "Email") %>
+          <%= email_field_tag :email, params[:email], class: "form-control" %>
+          <%= label_tag(:subject, "Sujet") %>
+          <%= text_field_tag :subject, params[:subject], class: "form-control" %>
+          <%= label_tag(:texte, "Texte") %>
+          <%= text_area_tag :texte, params[:texte], class: "form-control" %>
+          <%= submit_tag("Envoyer", class: "btn btn-primary")   %>
         <% end %>
+
+        <%#= form_for (@email) do |f| %>
+          <%#= f.label :Prènom %>
+          <%#= f.text_field :prenom, class: 'form-control' %>
+          <%#= f.label :Email %>
+          <%#= f.email_field :email, class: 'form-control' %>
+          <%#= f.label :Sujet %>
+          <%#= f.text_field :sujet, class: 'form-control' %>
+          <%#= f.label :Texte %>
+          <%#= f.text_area :texte, class: 'form-control' %>
+          <%#= f.submit "Envoyer", class: "btn btn-primary" %>
+        <%# end %>
       </div>
     </div>
   </div>

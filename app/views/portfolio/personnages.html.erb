@@ -14,7 +14,12 @@
       <% if portfol.typeOfImage == 'person' %>
         <div class = "col-md-4">
           <% if portfol.image_uid.present? %>
-            <%= image_tag portfol.image.thumb('320x180#').url  %>
+            <a class="fancybox-thumb" rel="fancybox-thumb" href="http://farm6.staticflickr.com/5444/17679973232_568353a624_b.jpg" title="Golden Manarola (Sanjeev Deo)">
+	             <img src="http://farm6.staticflickr.com/5444/17679973232_568353a624_m.jpg" alt="" />
+             </a>
+             <a class="fancybox-thumb" rel="fancybox-thumb" href="http://farm8.staticflickr.com/7367/16426879675_e32ac817a8_b.jpg" title="Codirosso spazzacamino (Massimo Greco _Foligno)">
+	              <a><%=link_to(image_tag portfol.image.url, :size => "200x200") %></a>
+             </a>
           <% else %>
             <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
           <% end %>
@@ -22,4 +27,19 @@
       <% end %>
     <% end %>
   </div>
+  <script>
+  $(".fancybox-thumb").fancybox({
+		prevEffect	: 'none',
+		nextEffect	: 'none',
+		helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			thumbs	: {
+				width	: 50,
+				height	: 50
+			}
+		}
+	});
+  </script>
 </div>

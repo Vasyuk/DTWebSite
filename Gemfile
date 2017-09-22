@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'fancybox-rails'
 gem 'rails_admin'
 gem 'bcrypt',         '3.1.11'
 gem "devise"
