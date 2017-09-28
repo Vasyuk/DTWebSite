@@ -3,23 +3,28 @@
     <div class = "col-md-12">
       <h1 class = "titlePages">Backgrounds & Décor</h1>
     </div>
-    <div class = "col-md-offset-3 col-md-6">
-      <%= link_to image_tag('Untitled-2.png')%>
+    <div class = "col-md-12">
+      <%= link_to image_tag('Untitled-2.png',class: 'center-block')%>
     </div>
   </div>
 </div>
 <div class = "container width">
   <div class = "row">
     <% @potfolio.each do |portfol| %>
-      <% if portfol.typeOfImage == 'back' %>
+
         <div class = "col-md-4">
           <% if portfol.image_uid.present? %>
-            <%= image_tag portfol.image.thumb('320x180#').url  %>
+          <a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg" title="Twilight Memories (doraartem)">
+	<img src="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_m.jpg" alt="" />
+</a>
+<a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_b.jpg" title="Electrical Power Lines and Pylons disappear over t.. (pautliubomir)">
+	<img src="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_m.jpg" alt="" />
+</a>
           <% else %>
             <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
           <% end %>
         </div>
       <% end %>
-    <% end %>
+
   </div>
 </div>

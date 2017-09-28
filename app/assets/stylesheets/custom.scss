@@ -13,6 +13,7 @@ h1{
   font-size: 55px;
   margin: 0px;
 }
+h2{text-align: center;}
 
 p{
   font-size: 17px;
@@ -69,21 +70,82 @@ html,body{
   text-align: center;
 }
 
-.cadreAccueile{
-  background-image: url('frame.png') ;
-  margin-top: -3%;
-}
 
-.textAccueile{
-  padding: 22%;
-  h1{
-    text-align: center;
+@media (min-width: 1200px) {
+  .cadreAccueile {
+    background-image: url('frame.png') ;
+    margin-top: -3%;
+
+    }
+  .image {
+    background-image: none ;
+    margin-top: -2%;
+    }
+  .textAccueile{
+    padding: 22%;
+    h1{
+      text-align: center;
+    }
+  }
+  .flImage{
+    margin-top: 34%;
   }
 }
 
-.flImage{
-  margin-top: -300%;
+
+@media (max-width: 1199px) {
+  .cadreAccueile {
+    background-image: none ;
+    margin-top: 5%;
+
+    }
+  .image {
+    background-image: url('frame.png') ;
+    margin-top: -7%;
+    }
+  .textAccueile{
+    padding: 20%;
+    h1{
+      text-align: center;
+    }
+    }
+    .flImage{
+      display: none;
+    }
 }
+
+@media (max-width: 990px) {
+  .cadreAccueile {
+    background-image: none ;
+    margin-top: 5%;
+
+    }
+  .image {
+    background-image: none;
+    margin-top: -7%;
+    }
+  .textAccueile{
+    padding: 4%;
+    h1{
+      text-align: center;
+    }
+  }
+  img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
 
 
 .photo{

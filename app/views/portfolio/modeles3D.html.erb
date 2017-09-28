@@ -3,15 +3,15 @@
     <div class = "col-md-12">
       <h1 class = "titlePages">Modèles 3D</h1>
     </div>
-    <div class = "col-md-offset-3 col-md-6">
-      <%= link_to image_tag('Untitled-2.png')%>
+    <div class = "col-md-12">
+      <%= link_to image_tag('Untitled-2.png',class: 'center-block')%>
     </div>
   </div>
 </div>
 <div class = "container width">
   <div class = "row">
     <% @potfolio.each do |portfol| %>
-      <% if portfol.typeOfImage == '3D' %>
+
         <div class = "col-md-4">
           <% if portfol.image_uid.present? %>
             <%= link_to image_path(portfol.image.url ,class: 'fancybox', :rel=>"gallery1", :title=>"Electrical Power Lines and Pylons disappear over t.. (pautliubomir)") do %>
@@ -22,7 +22,7 @@
             <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
           <% end %>
         </div>
-      <% end %>
+
     <% end %>
   </div>
   <script>

@@ -1,5 +1,5 @@
 <div class = 'container'>
-  <div class = 'row'>
+  <div class = 'row image'>
     <div class="col-md-1">
 
     </div>
@@ -24,30 +24,30 @@
         </div>
       </div>
     </div>
-    <div class="col-md-1">
-
+    <div class="col-md-1 flImage">
+      <%= image_tag('fl.png', class: ' center-block') %>
     </div>
   </div>
   <div class = 'row'>
-    <div class = 'col-md-1'>
+    <div class = 'col-md-1 col-sm-0'>
     </div>
-    <div class = 'col-md-2 case'>
-      <%= link_to image_tag('illus bottle.png') , portfolio_illustration_path %>
+    <div class = 'col-md-2 col-sm-6 case'>
+      <%= link_to image_tag('illus bottle.png', class: 'center-block') , portfolio_illustration_path %>
     </div>
-    <div class = 'col-md-2'>
-      <%= link_to image_tag('decor bottle.png',) , portfolio_background_path %>
+    <div class = 'col-md-2 col-sm-6'>
+      <%= link_to image_tag('decor bottle.png', class: 'center-block') , portfolio_background_path %>
     </div>
-    <div class = 'col-md-2'>
-      <%= link_to image_tag('chara bottle.png') , portfolio_personnages_path %>
+    <div class = 'col-md-2 col-sm-12'>
+      <%= link_to image_tag('chara bottle.png', class: 'center-block') , portfolio_personnages_path %>
     </div>
-    <div class = 'col-md-2'>
-      <%= link_to image_tag('3d bottle.png') , portfolio_modeles3D_path %>
+    <div class = 'col-md-2 col-sm-6'>
+      <%= link_to image_tag('3d bottle.png', class: 'center-block') , portfolio_modeles3D_path %>
     </div>
-    <div class = 'col-md-2'>
-      <%= link_to image_tag('contact bottle.png') , contacts_path %>
+    <div class = 'col-md-2 col-sm-6'>
+      <%= link_to image_tag('contact bottle.png', class: 'center-block') , contacts_path %>
     </div>
-    <div class = 'col-md-1'>
-      <%= image_tag('fl.png', class: 'flImage') %>
+    <div class = 'col-md-1 col-sm-0 col-xs-0'>
+
     </div>
   </div>
 </div>
@@ -55,4 +55,5 @@
   $("#CV").click(function(){
     window.open("assets/CV.png")
   });
+
 </script>

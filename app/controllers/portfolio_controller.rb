@@ -5,7 +5,7 @@ class PortfolioController < ApplicationController
   end
 
   def illustration
-      @potfolio = Portfolio.all
+    @potfolio = Portfolio.all
   end
 
   def modeles3D

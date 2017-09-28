@@ -1,10 +1,10 @@
 <div class = "container ">
   <div class = "row">
     <div class = "col-md-12">
-      <h1 class = "titlePages">Modèles 3D</h1>
+      <h1 class = "titlePages">Photographie</h1>
     </div>
-    <div class = "col-md-offset-3 col-md-6">
-      <%= link_to image_tag('Untitled-2.png')%>
+    <div class = "col-md-12">
+      <%= link_to image_tag('Untitled-2.png', class: 'center-block')%>
     </div>
   </div>
 </div>
@@ -14,7 +14,7 @@
       <% if portfol.typeOfImage == 'photo' %>
         <div class = "col-md-4">
           <% if portfol.image_uid.present? %>
-            <%= image_tag portfol.image.thumb('320x180#').url  %>
+            <%= link_to image_tag(portfol.image.thumb('320x180#').url, class: 'center-block') , portfol.image.url , class: "fancybox" %>
           <% else %>
             <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
           <% end %>
