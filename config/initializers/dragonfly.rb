@@ -5,9 +5,10 @@ require 'dragonfly'
 Dragonfly.app.configure do
   plugin :imagemagick
 
-  protect_from_dos_attacks true
+  protect_from_dos_attacks false
   secret "f6876a89f79bb6d4b2cd0f5faac7a7ae85efbde556bc841c306f445e7c413766"
 
+  response_header 'Accept-Ranges', 'bytes' 
   url_format "/media/:job/:name"
 
   datastore :file,
