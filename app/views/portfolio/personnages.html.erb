@@ -14,7 +14,7 @@
       <% if portfol.typeOfImage == 'person' %>
         <div class = "col-md-4 col-sm-6">
           <% if portfol.image_uid.present? %>
-            <%= link_to image_tag(portfol.image.thumb('320x180#').url, :class => 'center-block potfol', :alt => 'person') , portfol.image.url , { :class => 'fancybox', 'data-fancybox' => 'group'} %>
+            <%= link_to image_tag(portfol.image.thumb('320x180#').url, :class => 'center-block potfol', :alt => 'person') , portfol.image.url , { :class => 'fancybox', 'data-fancybox' => 'group', 'data-caption' => "My caption"} %>
           <% else %>
             <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
           <% end %>
