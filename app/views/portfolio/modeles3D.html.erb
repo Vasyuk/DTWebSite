@@ -11,18 +11,15 @@
 <div class = "container width">
   <div class = "row">
     <% @potfolio.each do |portfol| %>
-
-        <div class = "col-md-4">
+      <% if portfol.typeOfImage == '3d' %>
+        <div class = "col-md-4 col-sm-6">
           <% if portfol.image_uid.present? %>
-            <%= link_to image_path(portfol.image.url ,class: 'fancybox', :rel=>"gallery1", :title=>"Electrical Power Lines and Pylons disappear over t.. (pautliubomir)") do %>
-              <%= image_tag(portfol.image.thumb('320x180#').url) %>
-            <% end %>
-
+            <%= link_to image_tag(portfol.image.thumb('320x180#').url, :class => 'center-block potfol', :alt => '3d') , portfol.image.url , { :class => 'fancybox', 'data-fancybox' => 'group'} %>
           <% else %>
             <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
           <% end %>
         </div>
-
+      <% end %>
     <% end %>
   </div>
   <script>

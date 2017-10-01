@@ -12,14 +12,9 @@
   <div class = "row">
     <% @potfolio.each do |portfol| %>
       <% if portfol.typeOfImage == 'person' %>
-        <div class = "col-md-4">
+        <div class = "col-md-4 col-sm-6">
           <% if portfol.image_uid.present? %>
-            <a class="fancybox-thumb" rel="fancybox-thumb" href="http://farm6.staticflickr.com/5444/17679973232_568353a624_b.jpg" title="Golden Manarola (Sanjeev Deo)">
-	             <img src="http://farm6.staticflickr.com/5444/17679973232_568353a624_m.jpg" alt="" />
-             </a>
-             <a class="fancybox-thumb" rel="fancybox-thumb" href="http://farm8.staticflickr.com/7367/16426879675_e32ac817a8_b.jpg" title="Codirosso spazzacamino (Massimo Greco _Foligno)">
-	              <a><%=link_to(image_tag portfol.image.url, :size => "200x200") %></a>
-             </a>
+            <%= link_to image_tag(portfol.image.thumb('320x180#').url, :class => 'center-block potfol', :alt => 'person') , portfol.image.url , { :class => 'fancybox', 'data-fancybox' => 'group'} %>
           <% else %>
             <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
           <% end %>

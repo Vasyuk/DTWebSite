@@ -12,9 +12,9 @@
   <div class = "row">
     <% @potfolio.each do |portfol| %>
       <% if portfol.typeOfImage == 'photo' %>
-        <div class = "col-md-4">
+        <div class = "col-md-4 col-sm-6">
           <% if portfol.image_uid.present? %>
-            <%= link_to image_tag(portfol.image.thumb('320x180#').url, class: 'center-block') , portfol.image.url , class: "fancybox" %>
+            <%= link_to image_tag(portfol.image.thumb('320x180#').url, :class => 'center-block potfol', :alt => 'back') , portfol.image.url , { :class => 'fancybox', 'data-fancybox' => 'photo'} %>
           <% else %>
             <%= image_tag('no-image.png', class: 'portfolioPhoto') %>
           <% end %>
