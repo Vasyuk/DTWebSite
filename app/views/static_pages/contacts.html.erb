@@ -29,7 +29,7 @@
       <%= link_to image_tag('facebook-logo-button.png') , 'https://www.facebook.com/profile.php?id=100001326534418' %>
       <%= link_to image_tag('linkedin-logo-button.png') , 'https://www.linkedin.com/in/darya-trukhan-9741a212a?trk=nav_responsive_tab_profile' %>
       <div class = "contact">
-        <%= form_tag("/contacts", method: "get") do %>
+        <%= form_tag("/contacts", method: "post") do %>
           <%= label_tag(:name, "Prènom") %>
           <%= text_field_tag :name, params[:name], class: "form-control" %>
           <%= label_tag(:email, "Email") %>

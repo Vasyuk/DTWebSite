@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/contacts',  to: 'static_pages#contacts'
 
+  post '/contacts',  to: 'static_pages#contacts'
+
   get '/portfolio/background',  to: 'portfolio#background'
 
   get '/portfolio/illustration',  to: 'portfolio#illustration'
