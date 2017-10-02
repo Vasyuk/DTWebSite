@@ -7,6 +7,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+    <script type="text/javascript">
+      $(function(){
+        $('a[href^="#"]').click(function(){
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top}, 2000);//800 - длительность скроллинга в мс
+        return false;
+        });
+      });
+    </script>
   </head>
 
   <body>
