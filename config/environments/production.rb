@@ -68,12 +68,12 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name      => ENV['misha2018@gmail.com'],
     :password       => ENV['Paris,51'],
-    :domain         => 'heroku.com'
+    :domain         => 'gmail.com'
   }
 
   ActionMailer::Base.delivery_method = :smtp
 
-  config.action_mailer.default_url_options = { :host => 'YOUR-DOMAIN-HERE.COM' }
+  config.action_mailer.default_url_options = { :host => 'calm-oasis-72009.herokuapp.com' }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
