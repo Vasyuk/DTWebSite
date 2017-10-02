@@ -62,19 +62,18 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "DTWebSite_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.perform_deliveries = true # Set it to false to disable the email in dev mode
-config.action_mailer.raise_delivery_errors = true
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.default_url_options = { :host => "calm-oasis-72009.herokuapp.com" }
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com'
+  }
 
+  ActionMailer::Base.delivery_method = :smtp
 
-ActionMailer::Base.smtp_settings = {
-                    :address        => "smtp.gmail.com",
-                    :port           => 587,
-                    :authentication => :plain,
-                    :user_name      => "misha2018@gmail.com",
-                    :password       => "Paris,51"
-}
+  config.action_mailer.default_url_options = { :host => 'calm-oasis-72009.herokuapp.com' }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
