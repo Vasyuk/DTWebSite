@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
 
     @params = params
     @myemail = "mikhail.vasyuk@gmail.com"
-    mail(to: @myemail, subject: 'Welcome to My Awesome Site')
+    mail(to: @myemail, subject: @params[:subject])
   end
 
 end
